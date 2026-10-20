@@ -66,3 +66,4 @@ for i in range(1,n-1):
 curr.next = curr.next.next
 print_list(head)
 print()
+
