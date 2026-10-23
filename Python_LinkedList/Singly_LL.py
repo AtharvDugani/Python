@@ -1,4 +1,4 @@
-# de calss defines what is in the node or Structure of the node
+# This calss defines what is in the node or Structure of the node
 class Node:
     def __init__(self,data):
         self.data = data
