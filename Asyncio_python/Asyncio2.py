@@ -19,10 +19,19 @@ async def Task3():
     return("Task3")
 
 async def main():
-    result = await asyncio.gather(
-        Task1(),
-        Task2(),
-        Task3()
-    )
-    print(result)
+    # with the help of gather function
+    # result = await asyncio.gather(
+    #     Task1(),
+    #     Task2(),
+    #     Task3()
+    # )
+    # print(result)
+
+    # With the help of create_task method of asyncio 
+    t1 = asyncio.create_task(Task1())
+    t2 = asyncio.create_task( Task2())
+    t3 = asyncio.create_task( Task3())
+    await t1
+    await t2
+    await t3
 asyncio.run(main())
