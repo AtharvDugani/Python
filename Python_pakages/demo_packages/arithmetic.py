@@ -1,4 +1,4 @@
-def sum(a,b):
-    return a +b 
-def avg(a,b):
-    return (a + b) /2
+def add(a,b):
+    return a + b 
+def avg(*args):
+    return sum(*args) /len(*args)
