@@ -23,17 +23,6 @@ class student:
     def get_marks(self):
         return self.__marks
 
-    def grade(self):
-        if self.__marks >= 90 and self.__marks <=100:
-            print("Grade A")
-        elif self.__marks >= 80 and self.__marks <90:
-            print("Grade B")
-        elif self.__marks >= 70 and self.__marks <80:
-            print("Grade C")
-        elif self.__marks >= 60 and self.__marks <70:
-            print("Grade D")
-        else:
-            print("Fail!!")
 
     def set_admission_date(self, date):
         self.admission_date = datetime.strptime(date, "%d-%m-%Y")
@@ -41,7 +30,7 @@ class student:
     def report_generation(self):
         print("Student Report as Follows: ")
         print(self.rollno, self.name, self.get_marks())
-        self.grade()
+        grades(self.get_marks())
         time.sleep(4)
         print("Good Luck!!")
         
@@ -85,7 +74,7 @@ s1.set_marks(98)
 s1.set_admission_date("23-08-2026")
 s1.display()
 print(s1.get_marks())
-s1.grade()
+grades(s1.get_marks())
 print()
 
 s5 = MeritStudent("Tanaya",105)
